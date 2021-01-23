@@ -1,19 +1,4 @@
-
-.bg-image{
-	position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: .75;
-	overflow: hidden;
-	object-fit: cover;
-}
-
-
 .active-image-section{
-	/* background-color:yellow; */
 	height: 35rem;
 	width: 65%;
 	float: left;
@@ -24,59 +9,96 @@
 }
 
 .move-image-section{
-	/* background-color:orange; */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
 	height: 17.5rem;
 	width: 33%;
 	float: right;
-	border: 2px solid green;
-	margin-bottom: 2px;
+	margin-bottom: 5px;
+	overflow: hidden;
 }
 
-.col-6{
-	/* background-color:blue; */
-	height: 17rem;
-	width: 33%;
+.active-img{
+	position: absolute;
+	width: 140px;
+	height: 100px;
 	float: left;
+	margin-right: 5px;
+	top: 100px;
+	left: 220px;
+	overflow: hidden;
+}
+
+.move-text-section{
+	height: 17.5rem;
+	width: 33%;
 	border: 2px solid green;
+	float: right;
+	overflow: hidden;
+}
+
+.active-text{
+	position: absolute;
+}
+
+
+
+/* .active-img-2{
+	position: absolute;
+	width: 16%;
+	height: 100px;
+	float: left;
+	margin-right: 5px;
+	top: 100px;
+	left: 365px;
+	overflow: hidden;
+}
+
+.active-img-3{
+	position: absolute;
+	width: 16%;
+	height: 100px;
+	float: left;
+	margin-right: 5px;
+	top: 100px;
+	left: 510px;
+	overflow: hidden;
+	
+	
+}  */
+
+
+/* .bg-image{
+	position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .75;
+	overflow: hidden;
+	object-fit: cover;
+} */
+
+/* 
+.move-img-2{
+	width: 30%;
+	height: 100px;
+	float: left;
+	margin-right: 5px;
 }
 
 .move-img-3{
 	width: 30%;
 	height: 100px;
-	/* background-color: gray; */
 	float: left;
 	margin-right: 5px;
-	border: 2px solid green;
-	
-}
+} */
 
-.move-img-4{
-	width: 30%;
-	height: 100px;
-	/* background-color: gray; */
-	float: left;
-	margin-right: 5px;
-	border: 2px solid green;
-}
-
-.move-img-5{
-	width: 30%;
-	height: 100px;
-	/* background-color: gray; */
-	float: left;
-	margin-right: 5px;
-	border: 2px solid green;
-}
-
-.button-division{
-	height: 17.5rem;
-	width: 33%;
-	border: 2px solid green;
-	float: right;
-}
-
-.button{
-	background-color: lightcyan;
+/* .button{
+	background-color: lightgreen;
 	height: 30px;
 	width: 130px;
 	position: absolute;
@@ -89,44 +111,14 @@
 	padding: 5px 0;
 	display: inline-block;
 
-}
+} */
 
-
-.active-img-1{
-	/* background-image: url(images.jpeg); */
-	position: absolute;
-	width: 16%;
+/* .move-img{
+	width: 30%;
 	height: 100px;
-	background-color: gray;
 	float: left;
 	margin-right: 5px;
-	top: 100px;
-	left: 220px;
-	overflow: hidden;
-}
-
-.active-img-2{
-	background-image: url(img-1.png);
-	position: absolute;
-	width: 16%;
-	height: 100px;
-	background-color: gray;
-	float: left;
-	margin-right: 5px;
-	top: 100px;
-	left: 365px;
-}
-
-.active-img-3{
-	background-image: url(index.jpeg);
-	position: absolute;
-	width: 16%;
-	height: 100px;
-	background-color: gray;
-	float: left;
-	margin-right: 5px;
-	top: 100px;
-	left: 510px;
-	overflow: hidden;
 	
-}
+} */
+
+
