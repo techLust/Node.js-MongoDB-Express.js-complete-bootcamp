@@ -1,0 +1,31 @@
+				Global install
+
+1> Auto reload node file on browser on changes
+
+Install nodemon:-
+npm install -g nodemon
+
+Run nodemon:-
+nodemon "filename"
+
+2> node
+
+3> npm
+
+--------------------------------------------------------
+
+
+				Local install 
+
+1> Express
+
+2> 
+
+---------------------------------------------------------
+
+CREATE JSON FILE 
+
+create json file:- 
+npm init
+
+

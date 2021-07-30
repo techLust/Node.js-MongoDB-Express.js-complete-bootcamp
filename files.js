@@ -7,19 +7,20 @@ in seperate file. It reads and executes JS file and proced to return export obje
 
 const fs = require("fs");
 
-
-
 // READ FILE
+
 /* "readFileSync()" takes two argument i.e path and character encoding type */
 const textIn = fs.readFileSync("./node-farm/txt/input.txt", "utf-8");
 console.log(textIn);
 
 //WRITE FILE
+
 /* "readFileSync()" takes two argument i.e path(where o/p file to be stored and output variable */
 const textOut = `This is what we know about file: ${textIn}. \n Created on ${Date.now()}`;
 fs.writeFileSync("./node-farm/txt/output.txt", textOut);
 
 //**************** NON-BLOCKING ASYNCHRONOUS APPROACH ***************************** */
+
 console.log(`------------------Asynchronous----------`);
 fs.readFile("./node-farm/txt/start.txt", "utf-8", (err, data1) => {
   if (err) return console.log("File not found");
