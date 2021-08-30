@@ -17,7 +17,6 @@ const replaceTemp = require("./modules/replaceTemplate");
 const tempOverView = fs.readFileSync("./templates/overview.html", "utf-8");
 const cardView = fs.readFileSync("./templates/card.html", "utf-8");
 const productView = fs.readFileSync("./templates/product.html", "utf-8");
-
 const data = fs.readFileSync("./dev-data/data.json", "utf-8");
 // "JSON.parse()" convert json data into JavaScript. if the text is valid json text.
 const dataObj = JSON.parse(data);

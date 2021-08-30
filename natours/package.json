@@ -1,15 +1,14 @@
 {
-  "name": "node-farm",
+  "name": "natours",
   "version": "1.0.0",
-  "description": "learning node.js",
-  "main": "index.js",
+  "description": "Express, node, mongo ",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mahatab Hossain",
   "license": "ISC",
   "dependencies": {
-    "slugify": "^1.6.0",
-    "superagent": "^6.1.0"
+    "express": "^4.17.1"
   }
 }
