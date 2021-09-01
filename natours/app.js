@@ -13,12 +13,13 @@ app.use(morgan("dev"));
 // "use()" is used to add middleware.
 app.use(express.json());
 
+app.use(express.static(`${__dirname}/public`));
 // CREATE OWN MIDDLEWARE
 // Each middleware we access request and response and "next" function.
 app.use((req, res, next) => {
   console.log("Entering into middleware");
-  if (req.method == "POST") return res.send("Post request under maintainence");
-  console.log("completed middleware opration");
+  // if (req.method == "POST") return res.send("Post request under maintainence");
+  // console.log("completed middleware opration");
   next();
 });
 
@@ -173,12 +174,15 @@ const deleteUser = (req, res) => {
 userRouter.route("/:id").get(getUser).patch(updateUser).delete(deleteUser); */
 
 //CREATING AND MOUNTING MULTIPLE ROUTERS(middleware)
+
 app.use("/api/v1/tours", tourRouter);
 app.use("/api/v1/user", userRouter);
 
 // ************************** RUNNING SERVER **********************
-const port = 3000;
+/* const port = 3000;
 
 app.listen(port, () => {
   console.log(`Server running at port ${port}....`);
 });
+ */
+module.exports = app;
