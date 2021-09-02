@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require('fs');
 
 // Access file
 const tours = JSON.parse(fs.readFileSync(`./dev-data/data/tours-simple.json`));
@@ -9,8 +9,8 @@ exports.checkID = (req, res, next, val) => {
   console.log(`The tour id is ${val}`);
   if (req.params.id * 1 > tours.length) {
     res.status(404).json({
-      status: "fail",
-      message: "Invalid Details",
+      status: 'fail',
+      message: 'Invalid Details',
     });
   }
   next();
@@ -20,8 +20,8 @@ exports.checkBody = (req, res, next) => {
   console.log(req.body.name);
   if (!req.body.name || req.body.price) {
     return res.status(400).json({
-      status: "Fail",
-      message: "Missing name or price",
+      status: 'Fail',
+      message: 'Missing name or price',
     });
   }
   next();
@@ -31,29 +31,29 @@ exports.checkBody = (req, res, next) => {
 //get tour
 exports.getTour = (req, res) => {
   console.log(req.params);
-  console.log("This is get tour section");
+  console.log('This is get tour section');
 
   const id = req.params.id * 1;
   const tour = tours.find((el) => el.id === id);
 
   if (!tour) {
     res.status(404).json({
-      status: "Fail",
-      message: "invalid id",
+      status: 'Fail',
+      message: 'invalid id',
     });
   }
   res.status(200).json({
-    status: "success",
-    data: { tours },
+    status: 'success',
+    data: { tour },
   });
 };
 //GET(get all tours)
 exports.getAllTour = (req, res) => {
-  console.log("Entering into API");
+  console.log('Entering into API');
   console.log(req.params);
 
   res.status(200).json({
-    status: "success",
+    status: 'success',
     results: tours.lenth,
     requestAt: req.requestTime,
     data: {
@@ -70,11 +70,11 @@ exports.createTour = (req, res) => {
 
   tours.push(newTour);
   fs.writeFile(
-    "./dev-data/data/tours-simple.json",
+    './dev-data/data/tours-simple.json',
     JSON.stringify(tours),
     (err) => {
       res.status(201).json({
-        status: "success",
+        status: 'success',
         data: {
           tour: newTour,
         },
@@ -92,9 +92,9 @@ exports.updateTour = (req, res) => {
     });
   } */
   res.status(200).json({
-    status: "Success",
+    status: 'Success',
     data: {
-      tour: "Updated tour here..",
+      tour: 'Updated tour here..',
     },
   });
 };
@@ -112,9 +112,9 @@ exports.deleteTour = (req, res) => {
 
   // "204" means No content.
   res.status(204).json({
-    status: "Success",
+    status: 'Success',
     data: {
-      tour: "null",
+      tour: 'null',
     },
   });
 };

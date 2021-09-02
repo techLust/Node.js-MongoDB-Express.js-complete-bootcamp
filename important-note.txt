@@ -1,0 +1,48 @@
+				GLOBAL INSTALL
+
+1> Auto reload node file on browser on changes
+
+Install nodemon:-
+npm install -g nodemon
+
+Run nodemon:-
+nodemon "filename"
+
+2> node
+
+3> npm
+
+--------------------------------------------------------
+
+
+				LOCAL INSTALLATION 
+
+1> Express (npm i express)
+
+2> 
+
+---------------------------------------------------------
+
+CREATE JSON FILE 
+
+create json file:- 
+npm init
+
+---------------------------------------------------------
+PRETTIER:
+
+Make a file .prettierrc and put the below line
+{
+singleQuote: true
+}
+
+CONFIGURE ESlint
+
+1) npm i eslint prettier eslint@^5.16.0 eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb
+ eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react 
+ eslint-plugin-react-hooks@^2.5.0 --save-dev
+
+ 2) Follow the link 
+ https://stackoverflow.com/questions/45093510/eslint-not-working-in-vs-code
+
+

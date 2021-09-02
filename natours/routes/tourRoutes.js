@@ -1,10 +1,10 @@
-const express = require("express");
-const tourController = require("./../controllers/tourController");
+const express = require('express');
+const tourController = require('./../controllers/tourController');
 
 const router = express.Router();
 
 router.param(
-  "id",
+  'id',
   tourController.checkID
   /*  (req, res, next, val) => {
   // console.log(`The tour id is ${val}`);
@@ -13,14 +13,14 @@ router.param(
 );
 
 router
-  .route("/")
+  .route('/')
 
   .get(tourController.getAllTour)
   // chaining multiple middleware.
   .post(tourController.checkBody, tourController.createTour);
 
 router
-  .route("/:id")
+  .route('/:id')
   .get(tourController.getTour)
   .patch(tourController.updateTour)
   .delete(tourController.deleteTour);

@@ -1,23 +1,28 @@
-const express = require("express");
-const morgan = require("morgan");
+const express = require('express');
+const morgan = require('morgan');
 
-const tourRouter = require("./routes/tourRoutes");
-const userRouter = require("./routes/userRoutes");
+const tourRouter = require('./routes/tourRoutes');
+const userRouter = require('./routes/userRoutes');
 
 const app = express();
 
 //THIRD PARTY MIDDLEWARE
-app.use(morgan("dev"));
+// It will only run when the app is in development environment.
+
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
 
 //MIDDLEWARE
 // "use()" is used to add middleware.
 app.use(express.json());
 
 app.use(express.static(`${__dirname}/public`));
+
 // CREATE OWN MIDDLEWARE
 // Each middleware we access request and response and "next" function.
 app.use((req, res, next) => {
-  console.log("Entering into middleware");
+  // console.log('Entering into middleware');
   // if (req.method == "POST") return res.send("Post request under maintainence");
   // console.log("completed middleware opration");
   next();
@@ -175,8 +180,8 @@ userRouter.route("/:id").get(getUser).patch(updateUser).delete(deleteUser); */
 
 //CREATING AND MOUNTING MULTIPLE ROUTERS(middleware)
 
-app.use("/api/v1/tours", tourRouter);
-app.use("/api/v1/user", userRouter);
+app.use('/api/v1/tours', tourRouter);
+app.use('/api/v1/user', userRouter);
 
 // ************************** RUNNING SERVER **********************
 /* const port = 3000;
