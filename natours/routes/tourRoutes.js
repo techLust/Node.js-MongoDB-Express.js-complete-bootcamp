@@ -1,16 +1,16 @@
 const express = require('express');
-const tourController = require('./../controllers/tourController');
+const tourController = require('../controllers/tourController');
 
 const router = express.Router();
 
-router.param(
-  'id',
-  tourController.checkID
-  /*  (req, res, next, val) => {
-  // console.log(`The tour id is ${val}`);
-  next();
-} */
-);
+// router.param(
+//   'id',
+//   tourController.checkID
+//   /*  (req, res, next, val) => {
+//   // console.log(`The tour id is ${val}`);
+//   next();
+// } */
+// );
 
 router
   .route('/')

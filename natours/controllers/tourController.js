@@ -1,11 +1,12 @@
-const fs = require('fs');
+// const fs = require('fs');
+const Tour = require('../models/tourModels');
 
 // Access file
-const tours = JSON.parse(fs.readFileSync(`./dev-data/data/tours-simple.json`));
+// const tours = JSON.parse(fs.readFileSync(`./dev-data/data/tours-simple.json`));
 
 // PARAM MIDDLEWARE
 
-exports.checkID = (req, res, next, val) => {
+/* exports.checkID = (req, res, next, val) => {
   console.log(`The tour id is ${val}`);
   if (req.params.id * 1 > tours.length) {
     res.status(404).json({
@@ -14,7 +15,7 @@ exports.checkID = (req, res, next, val) => {
     });
   }
   next();
-};
+}; */
 
 exports.checkBody = (req, res, next) => {
   console.log(req.body.name);
@@ -34,7 +35,8 @@ exports.getTour = (req, res) => {
   console.log('This is get tour section');
 
   const id = req.params.id * 1;
-  const tour = tours.find((el) => el.id === id);
+
+  /*   const tour = tours.find((el) => el.id === id);
 
   if (!tour) {
     res.status(404).json({
@@ -45,7 +47,7 @@ exports.getTour = (req, res) => {
   res.status(200).json({
     status: 'success',
     data: { tour },
-  });
+  }); */
 };
 //GET(get all tours)
 exports.getAllTour = (req, res) => {
@@ -54,17 +56,24 @@ exports.getAllTour = (req, res) => {
 
   res.status(200).json({
     status: 'success',
-    results: tours.lenth,
     requestAt: req.requestTime,
-    data: {
-      tours,
-    },
+    // results: tours.length,
+    // data: {
+    //   tours,
+    // },
   });
 };
 
 //POST(create tour)
 exports.createTour = (req, res) => {
-  const newId = tours[tours.length - 1].id + 1;
+  res.status(201).json({
+    status: 'success',
+    // data: {
+    //   tour: newTour,
+    // },
+  });
+
+  /*   const newId = tours[tours.length - 1].id + 1;
 
   const newTour = Object.assign({ id: newId }, req.body);
 
@@ -80,7 +89,7 @@ exports.createTour = (req, res) => {
         },
       });
     }
-  );
+  ); */
 };
 
 // PATCH(update tour)

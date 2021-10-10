@@ -1,5 +1,5 @@
-				GLOBAL INSTALL
-
+GLOBAL INSTALL
+--------------
 1> Auto reload node file on browser on changes
 
 Install nodemon:-
@@ -13,24 +13,23 @@ nodemon "filename"
 3> npm
 
 --------------------------------------------------------
-
-
-				LOCAL INSTALLATION 
+LOCAL INSTALLATION 
+------------------
 
 1> Express (npm i express)
-
-2> 
 
 ---------------------------------------------------------
 
 CREATE JSON FILE 
+----------------
 
 create json file:- 
 npm init
 
 ---------------------------------------------------------
-PRETTIER:
 
+PRETTIER:
+---------
 Make a file .prettierrc and put the below line
 {
 singleQuote: true
@@ -42,7 +41,19 @@ CONFIGURE ESlint
  eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react 
  eslint-plugin-react-hooks@^2.5.0 --save-dev
 
- 2) Follow the link 
+ 2) Follow this link 
  https://stackoverflow.com/questions/45093510/eslint-not-working-in-vs-code
+
+---------------------------------------------------------
+
+MongoDB installation:
+
+1> Follow the link below ->
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
+2> Install Mongoos into the project
+npm i mongoose
+
+
 
 
